@@ -1,0 +1,372 @@
+// * ==========================================================================
+// * Grid
+// * ==========================================================================
+
+@keyframes scale-ame {
+  0% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.wrap-block {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 45px;
+  padding-right: 0px;
+  position: relative;
+
+  @include min-width(960px) {
+		height: 100%;
+    padding-left: 60px;
+  }
+}
+
+.grid-main {
+  width: 100%;
+
+  @include min-width(1025px) {
+    //height: 100vh;
+		height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+	//@include max-height(830px) {
+  //  height: auto;
+  //}
+
+	@media screen and (min-width: 1025px) and (max-height: 600px){ 
+		height: auto;
+	}
+
+
+
+
+  .grid-block {
+    position: relative;
+    padding: 30px 20px;
+
+    @include min-width(1025px) {
+      padding-top: 37px;
+      padding-bottom: 45px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .h3 {
+      text-align: center;
+      font-size: 5vw;
+      color: $color-gray-3;
+
+      @include min-width(484px) {
+        font-size: 3.5vw;
+      }
+
+      @include min-width(1025px) {
+        font-size: 1.5vw;
+      }
+    }
+  }
+
+  .g1 {
+    width: 100%;
+
+    @include min-width(1025px) {
+      width: 11%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:after {
+      display: none;
+
+      @include min-width(1025px) {
+        content: "";
+        display: block;
+        position: absolute;
+        left: auto;
+        right: 0;
+        top: 50%;
+        bottom: auto;
+        margin-top: -45vh;
+        width: 1px;
+        height: 90vh;
+        background-color: $color-gray-6;
+      }
+    }
+  }
+  .g2 {
+    width: 100%;
+    border-bottom: 1px solid $color-gray-6;
+
+    @include min-width(1025px) {
+      width: 21%;
+      height: 100%;
+      border-right: 1px solid $color-gray-6;
+    }
+
+    .g2-top {
+      .h1 {
+        font-size: 28px;
+        color: $color-primary-1;
+
+        @include min-width(768px) {
+          font-size: 4vw;
+        }
+
+        @include min-width(1025px) {
+          font-size: 3vw;
+        }
+      }
+
+      .h2 {
+        margin-top: 1.375rem;
+        line-height: 1.5;
+        font-size: 16px;
+        color: $color-gray-4;
+
+        @include min-width(768px) {
+          font-size: 2.5vw;
+        }
+
+        @include min-width(1025px) {
+          font-size: 1.7vw;
+        }
+      }
+    }
+
+    .g2-bottom {
+      display: none;
+
+      @include min-width(1025px) {
+        display: block;
+        position: absolute;
+        left: 20px;
+        bottom: 45px;
+      }
+
+      .InteriorDesign {
+        > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .g3 {
+    width: 100%;
+    border-bottom: 1px solid $color-gray-6;
+    position: relative;
+
+    @include min-width(1025px) {
+      width: 21%;
+      border-right: 1px solid $color-gray-6;
+    }
+  }
+  .g4 {
+    width: 100%;
+    border-bottom: 1px solid $color-gray-6;
+
+    @include min-width(1025px) {
+      width: 21%;
+      border-right: 1px solid $color-gray-6;
+    }
+  }
+  .g5 {
+    width: 100%;
+
+    @include min-width(1025px) {
+      width: 21%;
+      border-right: 1px solid $color-gray-6;
+    }
+  }
+  .g6 {
+    width: 100%;
+		border-top: 1px solid $color-gray-6;
+
+    @include min-width(1025px) {
+      width: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+			border-top: none;
+    }
+
+    .g6-pc {
+      display: none;
+
+      @include min-width(1025px) {
+        display: block;
+      }
+    }
+
+    .g6-mb {
+      display: block;
+
+      @include min-width(1025px) {
+        display: none;
+      }
+    }
+
+    .g6-img {
+      width: 100%;
+      height: 100%;
+			margin: 0 auto;
+
+			@include min-width(1025px) {
+				width: 40%;
+			}
+
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .g-top {
+    .g-title {
+      .h1 {
+        width: 100%;
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 6vw;
+
+        @include min-width(484px) {
+          font-size: 3vw;
+        }
+
+        @include min-width(1025px) {
+          font-size: 1.6vw;
+        }
+
+        > span {
+          display: block;
+          margin-bottom: 0;
+          line-height: 1.2;
+          font-family: "Noto Serif TC", serif;
+          font-weight: 700;
+          color: $color-primary-1;
+        }
+      }
+      .h3 {
+        display: flex;
+        justify-content: space-between;
+        font-size: 5vw;
+        color: $color-gray-6;
+
+        @include min-width(484px) {
+          font-size: 2.5vw;
+        }
+
+        @include min-width(1025px) {
+          font-size: 1vw;
+        }
+
+        > span {
+          display: block;
+          font-size: 4vw;
+          color: $color-gray-6;
+
+					@include min-width(768px) {
+						font-size: 3vw;
+					}
+
+					@include min-width(1025px) {
+						font-size: 1vw;
+					}
+        }
+      }
+    }
+    .g-pfp {
+      @include min-width(1025px) {
+        margin-top: 1rem;
+      }
+
+      > img {
+        width: 100%;
+      }
+
+      &.g3-pfp {
+				margin-top: 2rem;
+        overflow: hidden;
+
+				@include min-width(1025px) {
+					margin-top: 1rem;
+				}
+
+        > img {
+          animation: scale-ame 1s forwards;
+        }
+      }
+    }
+  }
+
+  .g-description {
+    margin-top: 1.5rem;
+
+    .h1 {
+      margin-bottom: 1.5rem;
+      font-size: 5vw;
+      color: $color-primary-1;
+
+      @include min-width(1025px) {
+        font-size: 2vw;
+      }
+    }
+
+    > p {
+      margin-bottom: 0.25rem;
+      font-size: 2.5vw;
+      color: $color-gray-6;
+
+      @include min-width(1025px) {
+        margin-bottom: 0.5rem;
+        font-size: 1vw;
+      }
+    }
+  }
+
+  .g-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    @include min-width(1025px) {
+      margin-top: 0;
+      padding: 0 20px;
+      position: absolute;
+      left: 0;
+      bottom: 45px;
+    }
+
+    .more-btn {
+      width: 100%;
+      padding: 10px 0px;
+      border: 1px solid $color-gray-6;
+      display: block;
+      color: $color-gray-6;
+      text-align: center;
+      font-size: 3vw;
+      font-family: "Cinzel", serif;
+      font-weight: 400;
+      transition: 0.2s;
+
+      @include min-width(1025px) {
+        font-size: 1.2vw;
+
+        &:hover {
+          background-color: $color-primary-1;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

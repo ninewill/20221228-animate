@@ -245,12 +245,10 @@
 }
 
 .swiper-pagination {
-    position: absolute;
+		display: flex;
+		justify-content: center;
     text-align: center;
-    -webkit-transition: 300ms opacity;
-    -o-transition: 300ms opacity;
     transition: 300ms opacity;
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     z-index: 10;
 }
@@ -263,8 +261,8 @@
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-container-horizontal>.swiper-pagination-bullets {
-    bottom: 10px;
-    left: 0;
+    bottom: 70px;
+    right: 263.35px;
     width: 100%;
 }
 

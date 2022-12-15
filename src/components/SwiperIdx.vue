@@ -2,19 +2,34 @@
   <div class="swiper mySwiper">
     <div class="swiper-wrapper swiper-wrapper-idx">
       <div class="swiper-slide">
-        <img class="swiper-pc" src="@/assets/images/pic/s1_Banner01_2x.png" alt="圖片" />
-				<img class="swiper-mb" src="@/assets/images/mobile/s1_banner01.png" alt="圖片" />
+        <video loop autoplay playsinline muted="muted" id="myVideo">
+          <source
+            src="@/assets/images/video/gold-design.mp4"
+            type="video/mp4"
+          />
+        </video>
       </div>
       <div class="swiper-slide">
-        <img class="swiper-pc" src="@/assets/images/pic/s1_Banner02_2x.png" alt="圖片" />
-				<img class="swiper-mb" src="@/assets/images/mobile/s1_banner02.png" alt="圖片" />
+        <video loop autoplay playsinline muted="muted" id="myVideo">
+          <source
+            src="@/assets/images/video/剖析室內設計全思路.mp4"
+            type="video/mp4"
+          />
+        </video>
       </div>
       <div class="swiper-slide">
-        <img class="swiper-pc" src="@/assets/images/pic/s1_Banner03_2x.png" alt="圖片" />
-				<img class="swiper-mb" src="@/assets/images/mobile/s1_banner03.png" alt="圖片" />
+        <video loop autoplay playsinline muted="muted" id="myVideo">
+          <source
+            src="@/assets/images/video/節目精華搶先看.mp4"
+            type="video/mp4"
+          />
+        </video>
       </div>
     </div>
-    <div class="swiper-pagination pagination-idx"></div>
+    <div class="wrap-pag">
+      <div class="pag-text">節目精彩首播</div>
+      <div class="swiper-pagination pagination-idx"></div>
+    </div>
   </div>
 </template>
 
@@ -28,10 +43,15 @@ export default {
         delay: 2500,
         disableOnInteraction: false,
       },
-      //pagination: {
-      //  el: ".swiper-pagination",
-      //  clickable: true,
-      //},
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return (
+            '<span class="' + className + '">' + "0" + (index + 1) + "</span>"
+          );
+        },
+      },
     });
   },
 };
@@ -44,17 +64,16 @@ export default {
 
 .mySwiper {
   width: 100%;
-  height: 100%;
   display: flex;
   overflow: hidden;
+  position: absolute;
+  //left: 0;
+  //bottom: 0;
 
   @include min-width(1025px) {
-    width: 62%;
-    padding-left: 25px;
-    padding-bottom: 2rem;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    height: 100%;
+    //padding-left: 25px;
+    //padding-bottom: 2rem;
   }
 
   .swiper-wrapper-idx {
@@ -62,20 +81,20 @@ export default {
   }
 }
 
-.swiper-pc{
-	display: none;
+.swiper-pc {
+  display: none;
 
-	@include min-width(1025px) {
-		display: block;
-	}
+  @include min-width(1025px) {
+    display: block;
+  }
 }
 
-.swiper-mb{
-	display: block;
-	
-	@include min-width(1025px) {
-		display: none;
-	}
+.swiper-mb {
+  display: block;
+
+  @include min-width(1025px) {
+    display: none;
+  }
 }
 
 .swiper-slide {
@@ -88,39 +107,77 @@ export default {
   }
 }
 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.wrap-pag {
+  position: absolute;
+  bottom: 70px;
+  right: 263.35px;
+  width: 100%;
+  display: flex;
+	align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+
+	.pag-text{
+		margin-right: 35%;
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: 1.5vw;
+		color: $color-white;
+		z-index: 999;
+
+		&::after{
+			content: "";
+			position: absolute;
+			left: 115%;
+			width: 350%;
+			border: 1px dashed #FFFFFF;
+			display: block;
+		}
+	}
+}
+
 .pagination-idx {
-  display: none;
+	justify-content: flex-end;
+  z-index: 999;
 
   @include min-width(1025px) {
-    margin-bottom: 40%;
-    order: 0;
-    position: static;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
   }
 
   @include min-width(1280px) {
-    margin-bottom: 35%;
   }
 
   @include min-width(1650px) {
-    margin-bottom: 27%;
   }
 
   > span {
-    width: 10px;
-    height: 10px;
-    margin-top: 25px !important;
-    display: block;
+		margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    color: $color-white;
+
+		&:last-child{
+			margin-right: 0;
+		}
 
     &.swiper-pagination-bullet {
+      line-height: 2;
       border: 1px solid $color-white;
       background: transparent;
       opacity: 1;
     }
     &.swiper-pagination-bullet-active {
-      background: $color-white;
+      background: $color-primary-1;
+      color: $color-white;
     }
   }
 }

@@ -30,7 +30,7 @@
         </div>
         <div class="cd-popup-container-left-bottom">
           <div class="swiper popup-swiper-form">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper swiper-wrapper-b">
               <div class="swiper-slide">
                 <div class="top-banner">
                   <img src="@/assets/images/pic/popup_text_p1.svg" />
@@ -460,6 +460,10 @@ export default {
 @import "@/assets/scss/from-option.scss";
 @import "@/assets/scss/from.scss";
 @import "@/assets/scss/swiper.scss";
+
+.swiper-wrapper-b{
+	margin-bottom: 2rem;
+}
 
 .input-checkbox {
   display: flex;

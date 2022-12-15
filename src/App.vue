@@ -11,6 +11,7 @@
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
 
+
 export default {
   name: "HomeView",
   components: {
@@ -76,23 +77,23 @@ body {
 #main {
   //padding-top: 37px;
   //padding-bottom: 37px;
-  padding-left: 74px;
+  padding-left: 76px;
   padding-right: 30px;
   position: relative;
   // height: 100%;
-  @include min-width(768px) {
+  @include min-width(960px) {
     //padding-top: 60px;
     //padding-bottom: 60px;
-    padding-left: 74px;
+    padding-left: 92px;
   }
 
   @include min-width(1025px) {
-    padding-left: 104px;
+    padding-left: 122px;
     padding-right: 60px;
   }
 
   @include min-width(1280px) {
-    padding-left: 120px;
+    padding-left: 122px;
   }
 
   // 單頁式網站的主要內容區塊

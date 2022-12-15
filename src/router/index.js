@@ -15,6 +15,42 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "page1" */ "../views/Page1.vue"),
   },
+	{
+    path: "/page1-1",
+    name: "page1-1",
+    component: () =>
+      import(/* webpackChunkName: "page1" */ "../views/Page1-1.vue"),
+  },
+	{
+    path: "/page1-2",
+    name: "page1-2",
+    component: () =>
+      import(/* webpackChunkName: "page1" */ "../views/Page1-2.vue"),
+  },
+	{
+    path: "/page1-3",
+    name: "page1-3",
+    component: () =>
+      import(/* webpackChunkName: "page1" */ "../views/Page1-3.vue"),
+  },
+	{
+    path: "/page1-1-1",
+    name: "page1-1-1",
+    component: () =>
+      import(/* webpackChunkName: "page1" */ "../views/Page1-1-1.vue"),
+  },
+	{
+    path: "/page1-1-2",
+    name: "page1-1-2",
+    component: () =>
+      import(/* webpackChunkName: "page1" */ "../views/Page1-1-2.vue"),
+  },
+	{
+    path: "/page1-1-3",
+    name: "page1-1-3",
+    component: () =>
+      import(/* webpackChunkName: "page1" */ "../views/Page1-1-3.vue"),
+  },
   {
     path: "/page2",
     name: "page2",

@@ -233,10 +233,10 @@ export default {
      */
 
     var swiper3 = new Swiper(".popup-swiper-form", {
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
+      //autoplay: {
+      //  delay: 3000,
+      //  disableOnInteraction: false,
+      //},
       pagination: {
         el: ".swiper-pagination",
         clickable: true,

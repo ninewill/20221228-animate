@@ -8,9 +8,9 @@
 
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="form-tag">立即抽獎</div>
-                <div class="form-title">大師首推設計必備工具</div>
-                <div class="form-subtitle">打造視覺美感兼具實用性設計</div>
+                <div class="form-tag">限量名額</div>
+                <div class="form-title">專業技法＋必備工具書雙重搭配</div>
+                <div class="form-subtitle">完全掌握專業技能，動畫水平全面提升</div>
               </div>
               <div class="swiper-slide">
                 <div class="form-tag">免費體驗</div>
@@ -509,7 +509,7 @@ export default {
 
 .privacy {
   font-size: 1rem;
-  color: $color-gray-4;
+  color: $color-gray-1;
 
   > a {
     display: inline-block;
